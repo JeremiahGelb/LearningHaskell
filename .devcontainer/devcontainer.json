@@ -1,0 +1,19 @@
+{
+  "name": "Haskell Dev Environment",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "target": "builder"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "haskell.haskell"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/opt/build,type=bind"
+  ],
+  "workspaceFolder": "/opt/build"
+}

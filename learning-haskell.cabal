@@ -1,0 +1,25 @@
+cabal-version:      3.0
+name:               learning-haskell
+version:            0.1.0.0
+
+-- 1. The Library (The core logic)
+library
+    exposed-modules:  Fib
+    hs-source-dirs:   src
+    build-depends:    base >=4.17.0.0
+    default-language: Haskell2010
+
+-- 2. The Executable (The CLI app)
+executable learning-haskell-exe
+    main-is:          Main.hs
+    hs-source-dirs:   app
+    build-depends:    base >=4.17.0.0, learning-haskell
+    default-language: Haskell2010
+
+-- 3. The Test Suite
+test-suite learning-haskell-test
+    type:             exitcode-stdio-1.0
+    main-is:          Spec.hs
+    hs-source-dirs:   test
+    build-depends:    base >=4.17.0.0, learning-haskell
+    default-language: Haskell2010
