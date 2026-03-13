@@ -8,6 +8,9 @@ WORKDIR /opt/build
 RUN apt-get update && apt-get install -y libgmp-dev && rm -rf /var/lib/apt/lists/*
 RUN cabal update
 
+# Install ghcup for vs code haskell plugin
+RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
 # Cache dependencies separately
 COPY . .
 RUN --mount=type=cache,target=/root/.cabal/store \
