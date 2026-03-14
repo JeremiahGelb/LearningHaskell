@@ -22,6 +22,9 @@ run:
 repl:
 	$(CABAL) repl lib:learning-haskell
 
+lint:
+	hlint .
+
 # Clean build artifacts
 clean:
 	$(CABAL) clean

@@ -7,7 +7,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "haskell.haskell"
+        "haskell.haskell",
+        "justusadam.language-haskell",
+        "hoovercj.haskell-linter",
+        "ms-vscode.makefile-tools"
       ]
     }
   },
