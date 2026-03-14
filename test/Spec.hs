@@ -1,5 +1,6 @@
 import Fib (fib)
 import Apply (apply)
+import Listless (modifyList)
 import Control.Exception (assert)
 
 -- A simple test helper
@@ -20,4 +21,8 @@ main = do
     testF "Apply_TimesTwo_0_times" (apply 0 (*2)) 1 1
     testF "Apply_TimesTwo_1_times" (apply 1 (*2)) 1 2
     testF "Apply_TimesTwo_2_times" (apply 2 (*2)) 1 4
+    testF "modifyList_add_milk"    (modifyList "add milk") ["bread"] ["bread", "milk"]
+    testF "modifyList_clear"       (modifyList "clear")    ["bread"] []
+    testF "modifyList_del_1"       (modifyList "del 1")    ["bread", "milk"] ["milk"]
+    testF "modifyList_none"        (modifyList "unknown")  ["bread"] ["bread"]
     putStrLn "All tests passed!"

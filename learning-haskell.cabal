@@ -4,7 +4,7 @@ version:            0.1.0.0
 
 -- 1. The Library (The core logic)
 library
-    exposed-modules:  Fib Apply
+    exposed-modules:  Fib Apply Listless
     hs-source-dirs:   src
     build-depends:    base >=4.17.0.0
     default-language: Haskell2010
